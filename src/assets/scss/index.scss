@@ -1,0 +1,9 @@
+@import "variable";
+@import "fontiran";
+@import "css-reset";
+@import "font-sizes";
+
+body {
+  font-family: var(--primary-font);
+}
+

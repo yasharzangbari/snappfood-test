@@ -1,0 +1,21 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 960px,
+  lg: 1200px,
+  xl: 1920px,
+);
+
+$theme-colors: (
+  "primary": #41b120,
+  "danger": #ff4136,
+);
+
+:root {
+  --primary-font: IRANSans, "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  --radius: 10px;
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-lg: 0 1rem 1rem rgba(0, 0, 0, 0.175);
+}
