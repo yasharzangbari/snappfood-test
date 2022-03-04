@@ -12,3 +12,7 @@ export const areEqual = (
 
 export const isDevMod =
   !process.env.NODE_ENV || process.env.NODE_ENV === "development";
+
+export const commaSeparator = (value: string | number) => {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};

@@ -1,9 +1,20 @@
-const initialState = {
-  avatars: {},
+import { RestaurantsType, SET_RESTAURANTS, UsersActionTypes } from "./types";
+
+const initialState: RestaurantsType = {
+  restaurants: [],
 };
 
-export const avatarsReducer = (state = initialState, action: any) => {
+export const restaurantsReducer = (
+  state = initialState,
+  action: UsersActionTypes
+): RestaurantsType => {
   switch (action.type) {
+    case SET_RESTAURANTS: {
+      return {
+        ...state,
+        restaurants: [...state.restaurants, ...action.payload],
+      };
+    }
     default: {
       return state;
     }

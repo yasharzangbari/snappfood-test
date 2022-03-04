@@ -1,7 +1,9 @@
 import styles from "./styles.module.scss";
 import { FC } from "react";
 import i18next from "i18next";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaEdit } from "react-icons/fa";
+import { BsFillPersonFill } from "react-icons/bs";
+
 import { Link, useMatch } from "react-router-dom";
 import {
   ROUTE_ACCOUNT,
@@ -24,19 +26,20 @@ const Footer: FC<Props> = (props) => {
       id: 2,
       title: i18next.t("orders"),
       link: ROUTE_ORDERS,
-      icon: <FaHome />,
+      icon: <FaEdit />,
     },
     {
       id: 3,
       title: i18next.t("my_account"),
       link: ROUTE_ACCOUNT,
-      icon: <FaHome />,
+      icon: <BsFillPersonFill />,
     },
   ] as const;
   return (
     <footer className={styles["footer"]}>
       {links.map((link) => (
         <Link
+          key={link.id}
           to={link.link}
           className={`${styles["footer__items"]} ${
             match?.pathname === link.link && styles["footer__items--active"]

@@ -1,42 +1,42 @@
 import styles from "./styles.module.scss";
 import { FaStar } from "react-icons/fa";
-type Props = {};
+import { finalResultItemType } from "../../constants/types";
+import { commaSeparator } from "../../libs/utils";
+type Props = {
+  data: finalResultItemType;
+};
 
 const Card = (props: Props) => {
   return (
     <div className={styles["card"]}>
       <div className={styles["card__image"]}>
-        <img
-          src="https://static.snapp-food.com/350x233/uploads/images/vendors/covers/5e01b8a4bcf22.jpg"
-          alt="restaurant-image"
-        />
+        <img src={props.data.backgroundImage} alt="restaurant-image" />
       </div>
       <div className={styles["card__image__logo"]}>
-        <img
-          src="https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/5e425b1b4cf0b.jpg"
-          alt="restaurant-logo"
-        />
+        <img src={props.data.logo} alt="restaurant-logo" />
       </div>
 
       <div className={styles["card__info"]}>
         <div className={styles["card__info__header"]}>
           <div className={styles["card__info__title"]}>
-            <span>پیتزا شیلا پارک ملت </span>
-            <small className={styles["card__info__badge"]}>تا10%</small>
+            <span>{props.data.title}</span>
+            <small className={styles["card__info__badge"]}>
+              {props.data.discountValueForView}%
+            </small>
           </div>
           <div className={styles["card__info__rate"]}>
-            <span>(11111)</span>
+            <span>({props.data.countReview})</span>
             <span className={styles["card__rate__badge"]}>
-              4.5 <FaStar />
+              {props.data.rate} <FaStar />
             </span>
           </div>
         </div>
-        <p className={styles["card__info__tags"]}>فست فود پیتزا ساندویج برگر</p>
+        <p className={styles["card__info__tags"]}>{props.data.description}</p>
         <p className={styles["card__info__price"]}>
           <span className={styles["card__info__price__title"]}>
-            پیک فروشنده{" "}
+            {props.data.vendorTypeTitle}
           </span>
-          <span>223234</span>
+          <span>{commaSeparator(props.data.deliveryFee)} ریال</span>
         </p>
       </div>
     </div>
