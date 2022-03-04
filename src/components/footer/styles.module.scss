@@ -1,0 +1,26 @@
+@import "../../assets/scss/mixin";
+.footer {
+  @include flex-justify-around;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--bg-white);
+  width: 100%;
+  .footer__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-top: 5px;
+      font-size: var(--text-small);
+    }
+  }
+  a {
+    text-decoration: none;
+    color: var(--gray-color);
+  }
+  .footer__items--active  {
+    color: var(--primary-color) !important;
+  }
+}

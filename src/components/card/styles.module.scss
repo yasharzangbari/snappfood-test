@@ -1,0 +1,76 @@
+@import "../../assets/scss/mixin";
+
+.card {
+  background-color:var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--card-shadow);
+  .card__image {
+    height: 134px;
+  }
+  .card__image__logo {
+    width: 64px;
+    height: 64px;
+    box-shadow: var(--card-shadow);
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: absolute;
+    bottom: 40%;
+    right: 2%;
+  }
+  .card__info {
+    line-height: 2;
+    padding: 20px 16px 8px 16px;
+    .card__info__header {
+      @include flex-justify-between;
+      span {
+        color: var(--gray-color);
+        font-weight: var(--font-medium);
+      }
+      .card__info__rate {
+        font-size: var(--text-small);
+        @include flex-align-center;
+        .card__rate__badge {
+          padding: 0 2px;
+          border-radius: var(--radius);
+          background-color: var(--star-bg);
+          color: var(--star-color);
+          @include flex-align-center;
+          font-size: var(--text-small);
+          svg {
+            font-size: var(--text-small);
+            margin-right: 2px;
+          }
+        }
+        span {
+          color: var(--text-gray-light);
+          margin-left: 5px;
+        }
+      }
+      .card__info__badge {
+        background-color: var(--primary-color);
+        color: var(--text-white-color);
+        border-radius: var(--radius);
+        font-size: var(--text-small);
+        font-weight: var(--font-medium);
+        padding: 2px;
+      }
+    }
+    .card__info__tags {
+      font-size: var(--text-medium);
+      color: var(--gray-color);
+    }
+    .card__info__price {
+      font-size: var(--text-medium);
+      .card__info__price__title {
+        color: var(--text-gray-light);
+      }
+    }
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: inherit;
+  }
+}

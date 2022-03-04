@@ -1,14 +1,17 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {ROUTE_HOME} from "../constants/routes";
-import {Home} from "./home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ROUTE_RESTAURANTS } from "../constants/routes";
+import { Restaurants } from "./restaurants";
+import Layout from "../components/layout";
 
 function App() {
   return (
-        <BrowserRouter>
-            <Routes>
-                <Route path={ROUTE_HOME} element={<Home/>}/>
-            </Routes>
-        </BrowserRouter>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path={ROUTE_RESTAURANTS} element={<Restaurants />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

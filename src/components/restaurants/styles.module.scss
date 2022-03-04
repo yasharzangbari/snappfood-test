@@ -1,0 +1,25 @@
+@import "../../assets/scss/mixin";
+
+.restaurants {
+  margin-top: 160px;
+  .restaurants__header {
+    padding: var(--main-padding);
+    margin-bottom: 15px;
+    @include flex-justify-between;
+    font-size: var(--text-medium);
+    h2 {
+      color: var(--gray-color);
+      font-weight: var(--font-medium);
+      font-size: 19px;
+    }
+    span {
+      color: var(--text-green);
+    }
+  }
+  .restaurants__cards {
+    background-color: var(--card-bg-color);
+    .restaurants__cards__item {
+      padding: var(--main-padding);
+    }
+  }
+}

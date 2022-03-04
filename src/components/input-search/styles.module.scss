@@ -1,0 +1,27 @@
+@import "../../assets/scss/mixin";
+.input__search {
+  position: relative;
+  .input__search__input {
+    background-color: var(--input-search-bg);
+    direction: rtl;
+    text-align: right;
+    border: 1px solid var(--input-search-bg);
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 48px;
+    padding: 0 16px 0 16px;
+    width: 100%;
+    &::placeholder {
+      font-size: var(--text-medium);
+      color: var(--input-color);
+    }
+  }
+  .input__search__icon {
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    color: #868686;
+    margin-right: 10px;
+    margin-left: 0!important;
+  }
+}

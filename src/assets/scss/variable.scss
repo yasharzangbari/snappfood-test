@@ -6,16 +6,30 @@ $grid-breakpoints: (
   xl: 1920px,
 );
 
-$theme-colors: (
-  "primary": #41b120,
-  "danger": #ff4136,
-);
-
 :root {
   --primary-font: IRANSans, "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  --radius: 10px;
-  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  --shadow-lg: 0 1rem 1rem rgba(0, 0, 0, 0.175);
+  --radius: 6px;
+  --primary-color : #ff00a4;
+  --text-color : #404040;
+  --gray-color : #505050;
+  --text-green: #22a958;
+  --alpha-red : rgba(189, 39, 45, 0.04);
+  --error-color : #bd272d;
+  --text-medium : 14px;
+  --text-small : 12px;
+  --font-medium : 500;
+  --text-size : 16px;
+  --main-padding : 10px 20px;
+  --input-search-bg: rgba(64,64,64,0.04);
+  --input-color: #cbcbcb;
+  --btn-green-border-color : rgba(34,169,88,0.2);
+  --card-bg-color : #f6f6f6;
+  --card-bg : #fff;
+  --card-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  --text-white-color: #fff;
+  --text-gray-light : #a3a3a3;
+  --star-bg: rgba(91, 168, 41, 0.08);;
+  --star-color: #5ba839;
+  --bg-white : #fff;
 }

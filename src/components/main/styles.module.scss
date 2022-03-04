@@ -1,0 +1,9 @@
+@import "../../assets/scss/mixin";
+
+.search__filter__section {
+  position: fixed;
+  top: 7%;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--bg-white);
+}

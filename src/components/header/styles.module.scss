@@ -1,0 +1,24 @@
+@import "../../assets/scss/mixin";
+.header {
+  @include flex-justify-between;
+  padding: var(--main-padding);
+  height: 48px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-white);
+  z-index: 1;
+  .header__address {
+    @include flex-align-center;
+    background-color: var(--alpha-red);
+    color: var(--error-color);
+    border-radius: 20px;
+    padding: 8px;
+    font-size: var(--text-medium);
+    font-weight: var(--font-medium);
+    svg {
+      margin-right: 10px;
+      fill: var(--gray-color);
+    }
+  }
+}

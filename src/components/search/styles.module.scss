@@ -1,0 +1,17 @@
+@import "../../assets/scss/mixin";
+.search {
+  padding: var(--main-padding);
+  height: 48px;
+  .search__input {
+    background-color: var(--alpha-red);
+    color: var(--error-color);
+    border-radius: var(--radius);
+    padding: 8px;
+    font-size: var(--text-medium);
+    font-weight: var(--font-medium);
+    svg {
+      margin-right: 10px;
+      fill: var(--gray-color);
+    }
+  }
+}
