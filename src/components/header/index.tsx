@@ -11,8 +11,8 @@ const Header: FC<Props> = () => {
     <header className={styles["header"]}>
       <FaAngleRight />
       <div className={styles["header__address"]}>
-        <AiFillCaretDown />
         <span>{i18next.t("select_address")}</span>
+        <AiFillCaretDown />
       </div>
 
       <FaShoppingCart />
